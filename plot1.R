@@ -11,7 +11,7 @@ library(data.table)
 
 ##read file
 data1 <- fread("household_power_consumption.txt",na.strings = "?", sep = ";", skip = 1)
-names(data1) <- c("Date", "Time", "Global_active_power", "Global_reactive_power", "Voltage",                    "Global_intensity", "Sub_metering_1", "Sub_metering_2", "Sub_metering_3")
+names(data1) <- c("Date", "Time", "Global_active_power", "Global_reactive_power", "Voltage", "Global_intensity", "Sub_metering_1", "Sub_metering_2", "Sub_metering_3")
 data1$Date <- as.Date(data1$Date, "%d/%m/%Y")
 
 ##creating subset for the only two dates needed
